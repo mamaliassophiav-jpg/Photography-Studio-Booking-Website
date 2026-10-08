@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="Book a professional photography studio session."
+    >
+    <title>Focus Studio | Photography Studio</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-logo" href="/">
+                <span class="site-logo-mark">F</span>
+                Focus Studio
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                 <a href="/index.html">
+                    Services
+                </a>
+
+                <a href="/status.html">
+                    Check Booking
+                </a>
+
+                <a href="/admin/login.html">
+                    Admin Login
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="hero-badge">Photography Studio</span>
+
+                <h1>Capture moments worth remembering.</h1>
+
+                <p>
+                    Book a photography session with Focus Studio
+                    for portraits, graduations, family photos, and
+                    special events.
+                </p>
+
+                <a
+                    class="button button-primary"
+                    href="#services"
+                >
+                    View Services
+                </a>
+            </div>
+        </section>
+
+        <section
+            class="page-section"
+            id="services"
+        >
+            <div class="container">
+                <div class="page-header">
+                    <h2>Our Services</h2>
+                    <p>
+                        Choose a photography package that fits
+                        your needs.
+                    </p>
+                </div>
+
+                <div
+                    id="services-message"
+                    class="message"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+                <div
+                    id="services-loading"
+                    class="loading-state"
+                >
+                    Loading available services...
+                </div>
+
+                <div
+                    id="services-empty"
+                    class="empty-state hidden"
+                >
+                    No photography services are currently available.
+                </div>
+
+                <div
+                    id="services-grid"
+                    class="services-grid"
+                ></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>
+                &copy; 2026 Focus Studio. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

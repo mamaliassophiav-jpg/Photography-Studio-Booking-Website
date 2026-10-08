@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Session | Focus Studio</title>
+
+    <meta
+        name="description"
+        content="Book a photography session at Focus Studio."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="/index.html" class="site-logo">
+                <span class="logo-mark">F</span>
+                <span>Focus Studio</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="/index.html">Services</a>
+                <a href="/status.html">Check Booking</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="page-header">
+            <div class="container">
+
+                <h1>Book a Photography Session</h1>
+
+                <p>
+                    Fill out the form below to request your photography session.
+                </p>
+
+            </div>
+        </section>
+
+
+        <section class="booking-section">
+            <div class="container">
+
+                <div class="booking-card">
+
+                    <!-- Main form message -->
+                    <div
+                        id="form-message"
+                        class="form-message"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <form id="booking-form" novalidate>
+
+                        <!-- Photography Service -->
+                        <div class="form-group">
+
+                            <label for="service">
+                                Photography Service
+                            </label>
+
+                            <select
+                                id="service"
+                                name="service_id"
+                                required
+                            >
+                                <option value="">
+                                    Loading services...
+                                </option>
+                            </select>
+
+                            <div
+                                id="service-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                        </div>
+
+
+                        <!-- Booking Date -->
+                        <div class="form-group">
+
+                            <label for="booking-date">
+                                Booking Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="booking-date"
+                                name="booking_date"
+                                required
+                            >
+
+                            <div
+                                id="booking-date-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                        </div>
+
+
+                        <!-- Booking Time -->
+                        <div class="form-group">
+
+                            <label for="booking-time">
+                                Booking Time
+                            </label>
+
+                            <p class="field-help">
+                                Select a time between 7:00 AM and 5:00 PM.
+                            </p>
+
+                            <div
+                                id="time-slots"
+                                class="time-slots"
+                                role="group"
+                                aria-label="Available booking times"
+                            ></div>
+
+                            <div
+                                id="booking-time-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                        </div>
+
+
+                        <!-- Number of Guests -->
+                        <div class="form-group">
+
+                            <label for="guests">
+                                Number of Guests
+                            </label>
+
+                            <input
+                                type="number"
+                                id="guests"
+                                name="guests"
+                                min="1"
+                                value="1"
+                                required
+                            >
+
+                            <div
+                                id="guests-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                        </div>
+
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+
+                            <div
+                                id="name-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                        </div>
+
+
+                        <!-- Contact Number -->
+                        <div class="form-group">
+
+                            <label for="contact">
+                                Contact Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="contact"
+                                name="contact"
+                                placeholder="e.g. 09171234567"
+                                autocomplete="tel"
+                                required
+                            >
+
+                            <div
+                                id="contact-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                        </div>
+
+
+                        <!-- Email Address -->
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <div
+                                id="email-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                        </div>
+
+
+                        <!-- Notes -->
+                        <div class="form-group">
+
+                            <label for="notes">
+                                Notes
+                            </label>
+
+                            <textarea
+                                id="notes"
+                                name="notes"
+                                rows="4"
+                                placeholder="Add any additional requests or information."
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Submit Button -->
+                        <button
+                            type="submit"
+                            id="submit-button"
+                            class="btn btn-primary"
+                        >
+                            Submit Booking
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Focus Studio. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <script src="/js/book.js"></script>
+
+</body>
+</html>

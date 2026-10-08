@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="Your Focus Studio booking confirmation."
+    >
+    <title>Booking Confirmation | Focus Studio</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-logo" href="/">
+                <span class="site-logo-mark">F</span>
+                Focus Studio
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="/">Services</a>
+                <a href="/status.html">Check Booking</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <div class="container">
+                <div
+                    id="confirmation-loading"
+                    class="loading-state"
+                >
+                    Loading your booking confirmation...
+                </div>
+
+                <div
+                    id="confirmation-error"
+                    class="message"
+                    role="alert"
+                ></div>
+
+                <div
+                    id="confirmation-content"
+                    class="confirmation-card hidden"
+                >
+                    <div
+                        class="confirmation-icon"
+                        aria-hidden="true"
+                    >
+                        ✓
+                    </div>
+
+                    <h1>Booking Submitted!</h1>
+
+                    <p>
+                        Your booking request has been received.
+                        Please keep your reference number for
+                        checking your booking status.
+                    </p>
+
+                    <p class="reference-label">
+                        Your Booking Reference
+                    </p>
+
+                    <div
+                        id="reference-number"
+                        class="reference-number"
+                    ></div>
+
+                    <button
+                        id="copy-button"
+                        type="button"
+                        class="button button-secondary copy-button"
+                    >
+                        Copy Reference
+                    </button>
+
+                    <div class="booking-summary">
+                        <h2>Booking Summary</h2>
+
+                        <div class="summary-row">
+                            <span class="summary-label">
+                                Service
+                            </span>
+                            <span
+                                id="summary-service"
+                                class="summary-value"
+                            ></span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span class="summary-label">
+                                Name
+                            </span>
+                            <span
+                                id="summary-name"
+                                class="summary-value"
+                            ></span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span class="summary-label">
+                                Date
+                            </span>
+                            <span
+                                id="summary-date"
+                                class="summary-value"
+                            ></span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span class="summary-label">
+                                Time
+                            </span>
+                            <span
+                                id="summary-time"
+                                class="summary-value"
+                            ></span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span class="summary-label">
+                                Guests
+                            </span>
+                            <span
+                                id="summary-guests"
+                                class="summary-value"
+                            ></span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span class="summary-label">
+                                Status
+                            </span>
+                            <span
+                                id="summary-status"
+                                class="summary-value"
+                            ></span>
+                        </div>
+                    </div>
+
+                    <div class="button-row">
+                        <a
+                            href="/status.html"
+                            class="button button-primary"
+                        >
+                            Check Booking Status
+                        </a>
+
+                        <a
+                            href="/"
+                            class="button button-secondary"
+                        >
+                            Back to Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>
+                &copy; 2026 Focus Studio. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/js/confirmation.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Login | Focus Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="/index.html" class="site-logo">
+                <span class="logo-mark">F</span>
+                <span>Focus Studio</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="/index.html">Services</a>
+                <a href="/status.html">Check Booking</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="page-header">
+            <div class="container">
+
+                <h1>Administrator Login</h1>
+
+                <p>
+                    Sign in to manage photography bookings.
+                </p>
+
+            </div>
+        </section>
+
+
+        <section class="booking-section">
+            <div class="container">
+
+                <div class="booking-card">
+
+                    <div
+                        id="login-message"
+                        class="form-message"
+                        role="alert"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <form id="login-form" novalidate>
+
+                        <div class="form-group">
+
+                            <label for="username">
+                                Username
+                            </label>
+
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                autocomplete="username"
+                                required
+                            >
+
+                            <div
+                                id="username-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <div
+                                id="password-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            id="login-button"
+                            class="btn btn-primary"
+                        >
+                            Login
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Focus Studio. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="/admin/js/login.js"></script>
+
+</body>
+</html>

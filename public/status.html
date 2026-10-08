@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="Check your Focus Studio booking status."
+    >
+    <title>Check Booking | Focus Studio</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-logo" href="/">
+                <span class="site-logo-mark">F</span>
+                Focus Studio
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="/">Services</a>
+                <a href="/status.html">Check Booking</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Check Your Booking</h1>
+                    <p>
+                        Enter your booking reference to view
+                        your booking details and status.
+                    </p>
+                </div>
+
+                <div class="form-card status-card">
+                    <div
+                        id="status-message"
+                        class="message"
+                        role="alert"
+                        aria-live="polite"
+                    ></div>
+
+                    <form
+                        id="status-form"
+                        novalidate
+                    >
+                        <div class="form-group">
+                            <label for="reference">
+                                Booking Reference
+                            </label>
+
+                            <input
+                                type="text"
+                                id="reference"
+                                name="reference"
+                                class="form-control"
+                                maxlength="8"
+                                placeholder="e.g. BK7A2F9Q"
+                                autocomplete="off"
+                                required
+                            >
+
+                            <div
+                                id="reference-error"
+                                class="field-error"
+                                aria-live="polite"
+                            ></div>
+
+                            <div class="form-help">
+                                Enter the reference number shown
+                                on your booking confirmation.
+                            </div>
+                        </div>
+
+                        <button
+                            id="status-button"
+                            type="submit"
+                            class="button button-primary button-full"
+                        >
+                            Check Booking
+                        </button>
+                    </form>
+
+                    <div
+                        id="status-result"
+                        class="status-result hidden"
+                    >
+                        <div class="status-header">
+                            <h2>Booking Details</h2>
+
+                            <span
+                                id="status-badge"
+                                class="status-badge"
+                            ></span>
+                        </div>
+
+                        <div class="booking-summary">
+                            <div class="summary-row">
+                                <span class="summary-label">
+                                    Reference
+                                </span>
+                                <span
+                                    id="result-reference"
+                                    class="summary-value"
+                                ></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">
+                                    Service
+                                </span>
+                                <span
+                                    id="result-service"
+                                    class="summary-value"
+                                ></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">
+                                    Name
+                                </span>
+                                <span
+                                    id="result-name"
+                                    class="summary-value"
+                                ></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">
+                                    Contact
+                                </span>
+                                <span
+                                    id="result-contact"
+                                    class="summary-value"
+                                ></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">
+                                    Email
+                                </span>
+                                <span
+                                    id="result-email"
+                                    class="summary-value"
+                                ></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">
+                                    Date
+                                </span>
+                                <span
+                                    id="result-date"
+                                    class="summary-value"
+                                ></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">
+                                    Time
+                                </span>
+                                <span
+                                    id="result-time"
+                                    class="summary-value"
+                                ></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">
+                                    Guests
+                                </span>
+                                <span
+                                    id="result-guests"
+                                    class="summary-value"
+                                ></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">
+                                    Notes
+                                </span>
+                                <span
+                                    id="result-notes"
+                                    class="summary-value"
+                                ></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>
+                &copy; 2026 Focus Studio. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/js/status.js"></script>
+</body>
+</html>

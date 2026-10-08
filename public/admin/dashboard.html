@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard | Focus Studio</title>
+
+    <meta
+        name="description"
+        content="Focus Studio administrator booking dashboard."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a href="/index.html" class="site-logo">
+                <span class="logo-mark">F</span>
+                <span>Focus Studio</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+
+                <a href="/index.html">
+                    Services
+                </a>
+
+                <a href="/status.html">
+                    Check Booking
+                </a>
+
+                <button
+                    type="button"
+                    id="logout-button"
+                    class="btn btn-secondary"
+                >
+                    Logout
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>Booking Dashboard</h1>
+
+                <p>
+                    Manage all Focus Studio photography bookings.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="admin-section">
+
+            <div class="container">
+
+
+                <!-- Dashboard Message -->
+
+                <div
+                    id="dashboard-message"
+                    class="form-message"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- Summary -->
+
+                <div class="summary-grid">
+
+                    <div class="summary-card">
+
+                        <span class="summary-label">
+                            Total Bookings
+                        </span>
+
+                        <strong
+                            id="total-count"
+                            class="summary-number"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <span class="summary-label">
+                            Pending
+                        </span>
+
+                        <strong
+                            id="pending-count"
+                            class="summary-number"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <span class="summary-label">
+                            Confirmed
+                        </span>
+
+                        <strong
+                            id="confirmed-count"
+                            class="summary-number"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Search and Filter -->
+
+                <div class="admin-controls">
+
+                    <div class="form-group">
+
+                        <label for="search">
+                            Search Bookings
+                        </label>
+
+                        <input
+                            type="search"
+                            id="search"
+                            placeholder="Search reference, name, contact, or service"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="status-filter">
+                            Filter by Status
+                        </label>
+
+                        <select id="status-filter">
+
+                            <option value="all">
+                                All statuses
+                            </option>
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="confirmed">
+                                Confirmed
+                            </option>
+
+                            <option value="cancelled">
+                                Cancelled
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Loading -->
+
+                <div
+                    id="loading-state"
+                    class="empty-state"
+                >
+                    <p>
+                        Loading bookings...
+                    </p>
+                </div>
+
+
+                <!-- Empty State -->
+
+                <div
+                    id="empty-state"
+                    class="empty-state"
+                    hidden
+                >
+                    <h2>No bookings yet</h2>
+
+                    <p>
+                        There are currently no bookings to display.
+                    </p>
+                </div>
+
+
+                <!-- Table -->
+
+                <div
+                    id="table-container"
+                    class="table-wrapper"
+                    hidden
+                >
+
+                    <table class="bookings-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th scope="col">
+                                    Reference
+                                </th>
+
+                                <th scope="col">
+                                    Service
+                                </th>
+
+                                <th scope="col">
+                                    Name
+                                </th>
+
+                                <th scope="col">
+                                    Contact
+                                </th>
+
+                                <th scope="col">
+                                    Date
+                                </th>
+
+                                <th scope="col">
+                                    Time
+                                </th>
+
+                                <th scope="col">
+                                    Guests
+                                </th>
+
+                                <th scope="col">
+                                    Status
+                                </th>
+
+                                <th scope="col">
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="bookings-table-body">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Focus Studio. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="/admin/js/dashboard.js"></script>
+
+</body>
+</html>
